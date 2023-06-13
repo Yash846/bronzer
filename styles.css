@@ -4,19 +4,122 @@
   box-sizing: border-box;
 }
 
+.bg-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-image: url("./assets/background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.filter-blur {
+  background: rgba(3, 3, 3, 0.3);
+  backdrop-filter: blur(5px);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
 .main {
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   height: 100vh;
   width: 100vw;
+  z-index: 2;
+  font-family: "Poppins", sans-serif;
+  color: #ffffffc7;
 }
 
 .logo {
-  width: 40vw;
+  position: absolute;
+  z-index: 2;
+  top: 20px;
+  left: 20px;
+  width: 20vw;
+  min-width: 215px;
+  max-width: 300px;
 }
 
 #image {
   width: 100%;
+}
+
+.coming-soon h1 {
+  font-size: clamp(40px, 3.5vw, 150px);
+  margin-bottom: 20px;
+  text-align: center;
+  line-height: 55px;
+}
+
+.sub-text {
+  font-weight: 600;
+  font-size: clamp(25px, 2.5vw, 35px);
+  margin-bottom: 20px;
+  margin-top: 10px;
+  margin: 10px;
+}
+
+.typed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: clamp(20px, 1.5vw, 30px);
+  height: 50px;
+  margin: 10px;
+}
+
+.whatsapp {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.whatsapp-text {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: clamp(20px, 1.5vw, 30px);
+}
+
+.whatsapp-btn a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.whatsapp-btn {
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50px;
+  width: 165px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  font-size: 20px;
+  z-index: 100;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.whatsapp-btn span {
+  padding-left: 5px;
 }

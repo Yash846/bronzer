@@ -4,24 +4,73 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+    />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
     <title>Bronzer</title>
   </head>
   <body>
-    <div class="main">
-      <div class="logo">
+    <div class="bg-image">
+      <div class="filter-blur"></div>
+      <div class="logo" data-aos="fade-right" data-aos-duration="1000">
         <img src="./assets/LOGO (1).png" id="image" alt="" />
       </div>
-      <div class="coming-soon">
-        <p>Coming Soon to a kitchen near you</p>
-        <p>Website under development</p>
-        <p>
-          Adding new stove designs. Building a new chimney experience for you.
-          Drawing new Interior designs for your home.
-        </p>
-        <p>Connect with us on WhatsApp for any queries</p>
+      <div class="main">
+        <div class="coming-soon">
+          <h1>We're Coming Soon</h1>
+          <!-- <p>Website under development</p> -->
+        </div>
+        <p class="sub-text">To a kitchen near you</p>
+        <div class="typed">
+          <span id="typed-text"></span>
+        </div>
+
+        <div class="whatsapp">
+          <p class="whatsapp-text">
+            In the meantime, feel free to connect with us on WhatsApp for any
+            requirements or queries
+          </p>
+          <button class="whatsapp-btn">
+            <a
+              href="https://wa.me/919898540840?text=I'm%20interested%20in%20your%20product%20offerings"
+              target="_blank"
+            >
+              <i class="fa fa-whatsapp my-float"></i>
+              <span>WhatsApp</span>
+            </a>
+          </button>
+
+          <!-- <button>Connect with us on WhatsApp for any queries</button> -->
+        </div>
       </div>
-      <div class="whatsapp"></div>
     </div>
   </body>
+  <script>
+    AOS.init();
+    var typed = new Typed("#typed-text", {
+      strings: [
+        "Adding new stove designs.",
+        "Building a new chimney experience",
+        "Drawing new Interior designs",
+      ],
+      typeSpeed: 20,
+      backSpeed: 0,
+      fadeOut: true,
+      loop: true,
+    });
+  </script>
 </html>
